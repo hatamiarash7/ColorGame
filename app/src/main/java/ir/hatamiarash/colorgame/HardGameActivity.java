@@ -1,11 +1,11 @@
-package com.prakharme.prakharsriv.colorphun;
+package ir.hatamiarash.colorgame;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.prakharme.prakharsriv.colorphun.util.BetterColor;
+import ir.hatamiarash.colorgame.util.BetterColor;
 import java.util.ArrayList;
 import java.util.Random;
 

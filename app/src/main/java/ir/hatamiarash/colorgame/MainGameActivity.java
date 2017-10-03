@@ -1,4 +1,4 @@
-package com.prakharme.prakharsriv.colorphun;
+package ir.hatamiarash.colorgame;
 
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;

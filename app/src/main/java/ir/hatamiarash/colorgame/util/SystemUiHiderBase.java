@@ -1,4 +1,4 @@
-package com.prakharme.prakharsriv.colorphun.util;
+package ir.hatamiarash.colorgame.util;
 
 import android.app.Activity;
 import android.view.View;

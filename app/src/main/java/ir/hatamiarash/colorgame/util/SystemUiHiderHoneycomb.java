@@ -1,4 +1,4 @@
-package com.prakharme.prakharsriv.colorphun.util;
+package ir.hatamiarash.colorgame.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
