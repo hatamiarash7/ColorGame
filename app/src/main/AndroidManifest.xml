@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="ir.hatamiarash.colorgame">
+
+
+    <uses-sdk
+        tools:overrideLibrary="co.ronash.pushe" />
+    <permission
+        android:name="ir.hatamiarash.colorgame.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission
+        android:name="ir.hatamiarash.colorgame.permission.C2D_MESSAGE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Optional permissions -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -35,5 +52,33 @@
             android:name=".HardGameActivity"
             android:label="@string/title_activity_hard_game">
         </activity>
+
+
+        <receiver android:name="co.ronash.pushe.receiver.UpdateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data
+                    android:path="ir.hatamiarash.colorgame"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="ir.hatamiarash.colorgame" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_728678053167"/>
+        <meta-data android:name="co.ronash.pushe.cr" android:value="aHR0cDovLzJjNzBjZGM1N2VmNjQyMjk4NmY4NmMyNjJmNDAxZjM0OjczZTIxZjVhMDkyMzRjNjc5YWQzZWNmZTM5OGZmM2YxQGNhLnB1c2hlLmlyLzYzODE="/>
+
     </application>
 </manifest>

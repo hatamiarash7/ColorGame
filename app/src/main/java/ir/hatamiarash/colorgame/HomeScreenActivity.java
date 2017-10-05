@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import co.ronash.pushe.Pushe;
+
 public class HomeScreenActivity extends FragmentActivity implements View.OnClickListener {
     
     private Button playGameButton;
@@ -27,6 +29,7 @@ public class HomeScreenActivity extends FragmentActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        Pushe.initialize(this, true);
         
         signInButton = findViewById(R.id.sign_in_button);
         signOutButton = findViewById(R.id.sign_out_button);
