@@ -54,8 +54,8 @@ public abstract class MainGameActivity extends Activity implements View.OnClickL
         TextView levelsLabel = (TextView) findViewById(R.id.level_label);
         
         // setting up fonts
-        Typeface avenir_black = Typeface.createFromAsset(getAssets(), "fonts/avenir_black.ttf");
-        Typeface avenir_book = Typeface.createFromAsset(getAssets(), "fonts/avenir_book.ttf");
+        Typeface avenir_black = Typeface.createFromAsset(getAssets(), "fonts/shabnam.ttf");
+        Typeface avenir_book = Typeface.createFromAsset(getAssets(), "fonts/shabnam.ttf");
         pointsTextView.setTypeface(avenir_black);
         levelTextView.setTypeface(avenir_black);
         pointsLabel.setTypeface(avenir_book);
